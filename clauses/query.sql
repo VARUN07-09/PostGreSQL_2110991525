@@ -5,20 +5,18 @@ Query: SELECT * FROM customer;
 Output:
  customer_id |    name     |    city     
 -------------+-------------+-------------
-           1 | John Smith  | New York
-           2 | Jane Doe    | Los Angeles
-           3 | Alice Brown | New York
-           4 | Bob Johnson | Chicago
-           5 | Emma Davis  | New York
+           1 | Varun       | Nangal
+           2 | Abhinav     | Kurukshetra
+           3 | Ayush       | saharnpur
+           4 | Priyanshu   | Jangpura
+           5 | Vishal      | Varansi
 (5 rows)
 
-Main query: SELECT name FROM customer WHERE city = 'New York';
+Main query: SELECT name FROM customer WHERE city = 'Jangpura';
 Output:
     name     
 -------------
- John Smith
- Alice Brown
- Emma Davis
+ Vishal
 
 
 
@@ -85,11 +83,12 @@ SELECT
 Output:
  order_id | customer_name |    city     | order_date | total_amount 
 ----------+---------------+-------------+------------+--------------
-        6 | John Smith    | New York    | 2025-01-01 |       100.00
-        7 | Jane Doe      | Los Angeles | 2025-01-02 |       200.00
-        8 | John Smith    | New York    | 2025-01-03 |       150.00
-        9 | Alice Brown   | New York    | 2025-01-04 |        50.00
-       10 | Jane Doe      | Los Angeles | 2025-01-05 |       300.00
+        6 | Varun         | Nangal      | 2025-01-01 |       100.00
+        7 | Abhinav       | Kurukshetra | 2025-01-02 |       200.00
+        8 | Ayush         | Saharnpur   | 2025-01-03 |       150.00
+        9 | Priyanshu     | Jangpura    | 2025-01-04 |        50.00
+       10 | Vishal        | Varansi     | 2025-01-05 |       300.00
+
 (5 rows)
 
 
