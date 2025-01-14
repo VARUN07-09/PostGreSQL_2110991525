@@ -104,21 +104,26 @@ QUEST3-> * DQL (Data Query Language):
      * Calculate the total number of books borrowed by each member.
 
 
-QUERY
+QUERY Query: SELECT * FROM Books WHERE author = 'author5';
 
  book_id | title  | publication_year | genre  | author  
 ---------+--------+------------------+--------+---------
        5 | title5 |             2005 | genre5 | author5
-(1 row) name  
+(1 row) 
 
 
+
+name  
 -------
  name4
 (1 row) title 
 
+
+
 -------
 (0 rows)
 
+Query: SELECT member_id, (SELECT COUNT(*) FROM Borrowings WHERE Borrowings.member_id = Members.member_id) AS total_borrowed FROM Members;
  name  | total_books_borrowed 
 -------+----------------------
  name3 |                    1
@@ -126,3 +131,17 @@ QUERY
  name5 |                    1
  name1 |                    2
 (4 rows)
+
+Queries: START TRANSACTION;
+
+INSERT INTO Borrowings(book_id, member_id, borrow_date, return_date, due_date) VALUES (1, 2, '2025-03-10', '2025-03-25', '2025-03-15');
+
+COMMIT;
+
+ROLLBACK;
+
+Output: 
+START TRANSACTION
+INSERT 0 1
+COMMIT
+ROLLBACK
