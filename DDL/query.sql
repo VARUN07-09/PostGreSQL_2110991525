@@ -149,4 +149,4 @@ DROP DATABASE
            |          |          |                 |         |       |        |           | postgres=CTc/postgres
  template1 | postgres | UTF8     | libc            | C       | C     |        |           | =c/postgres          +
            |          |          |                 |         |       |        |           | postgres=CTc/postgres
-(4 rows)
+(4 rows) 
