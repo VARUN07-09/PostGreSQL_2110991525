@@ -63,3 +63,5 @@ Indexes:
 Foreign-key constraints:
     "fk_customer_id" FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE RESTRICT
     "orders_customer_id_fkey" FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+
+
